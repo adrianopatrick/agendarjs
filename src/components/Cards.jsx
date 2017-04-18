@@ -7,9 +7,7 @@ class Cards extends Component {
         return (
             <a className="card">
                 <Avatar />
-                <div className="item">
-                    <Item label="Nome" value="Adriano Patrick"/>
-                </div>
+                <Item value={this.props.contato.nome} />
             </a>
         );
     }

@@ -10,12 +10,13 @@
 
 .title{
     background-color: #23475F;
-    height: 40px;
+    height: 50px;
 }
 
 .title-texto{
     margin-left: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
+    font-size: 20px;
 }
 
 .search {
@@ -24,13 +25,12 @@
 
 
 .cards{
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .card {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
-    border-bottom: 2px solid #CBECFB;
     padding: 0px 0px 5px 0px;
     margin: 10px 0 10px 0;
     display: flex;
@@ -93,4 +93,5 @@
     padding-left: 10px;
     width: 100%;
     height: 30px;
+    font-size: large;
 }

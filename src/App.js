@@ -1,38 +1,37 @@
 import React, {Component} from 'react';
-import Cards from './components/Cards';
+// import Cards from './components/Cards';
+import Header from './components/Header';
+import Add from './components/Add';
+import Cards from "./components/Cards";
 
 class App extends Component {
+
+    constructor() {
+        super();
+        this.state = {contatos: []};
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:8080/agenda-web/rest/agenda/contatos`)
+            .then(response => {
+                return response.json()
+            }).then(json => {
+            this.setState({contatos: json});
+        });
+    }
+
     render() {
         return (
             <div>
-                <div className="tela-contatos">
-                    <div className="title">
-                        <div className="title-texto">
-                            Meus Contatos
-                        </div>
-                    </div>
-                    <div className="search">
-                        <form>
-                            <div>
-                                <input type="search" className="empty" placeholder="&#xF002; Pesquisar"/>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <Header/>
 
                 <div className="cards">
-                    <Cards></Cards>
-                    <Cards></Cards>
-                    <Cards></Cards>
-                    <Cards></Cards>
-                    <Cards></Cards>
-                    <Cards></Cards>
-                    <Cards></Cards><Cards></Cards><Cards></Cards><Cards></Cards><Cards></Cards><Cards></Cards>
+                    {this.state.contatos.map(contato => {
+                        return <Cards key={contato.id} contato={contato}/>
+                    })}
                 </div>
 
-                <div className="button-circle">
-                    <span className="icon-circle"><i className="fa fa-plus" aria-hidden="true"></i></span>
-                </div>
+                <Add/>
             </div>
         );
     }
