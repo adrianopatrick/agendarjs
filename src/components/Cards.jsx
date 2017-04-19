@@ -6,7 +6,7 @@ class Cards extends Component {
     render() {
         return (
             <a className="card">
-                <Avatar />
+                <Avatar value={this.props.contato.nome} />
                 <Item value={this.props.contato.nome} />
             </a>
         );

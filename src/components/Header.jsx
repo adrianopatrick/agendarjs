@@ -4,7 +4,7 @@ const Header = () => (
     <div className="tela-contatos">
         <div className="title">
             <div className="title-texto">
-                Meus Contatos
+                Linkers - Agenda
             </div>
         </div>
         <div className="search">
@@ -14,6 +14,7 @@ const Header = () => (
                 </div>
             </form>
         </div>
+        <div className="line-separator"></div>
     </div>
 );
 

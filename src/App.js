@@ -12,7 +12,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:8080/agenda-web/rest/agenda/contatos`)
+        fetch(`http://localhost:8081/agenda-web/rest/agenda/contatos`)
             .then(response => {
                 return response.json()
             }).then(json => {
@@ -23,7 +23,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <Header />
 
                 <div className="cards">
                     {this.state.contatos.map(contato => {
