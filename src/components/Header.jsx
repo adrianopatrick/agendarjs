@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './Search';
 
 const Header = () => (
     <div className="tela-contatos">
@@ -7,13 +8,7 @@ const Header = () => (
                 Linkers - Agenda
             </div>
         </div>
-        <div className="search">
-            <form>
-                <div>
-                    <input type="search" className="empty" placeholder="&#xF002; Pesquisar"/>
-                </div>
-            </form>
-        </div>
+        <Search />
         <div className="line-separator"></div>
     </div>
 );
