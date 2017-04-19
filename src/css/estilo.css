@@ -86,7 +86,8 @@
 .icon-circle {
     position: relative;
     font-size: 20px;
-    line-height: 45px;
+    line-height: 42px;
+    left: 2px;
     color: #fff;
     font-family: "Courier New", monospace;
     font-weight: bold;

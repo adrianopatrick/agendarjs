@@ -4,7 +4,7 @@ const Search = (props) => (
     <div className="search">
         <form>
             <div>
-                <input type="search" className="empty" placeholder="&#xF002; Pesquisar"/>
+                <input type="search" value={props.descricao} onChange={props.change} className="empty" placeholder="&#xF002; Pesquisar"/>
             </div>
         </form>
     </div>
