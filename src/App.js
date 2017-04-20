@@ -30,19 +30,17 @@ class App extends React.Component {
             });
     }
 
-    refresh(descricao) {
-        console.log(this.state.descricao);
+    refresh() {
         this.setState({
             ...this.state,
-            onDemandContatos: this.state.contatos.filter(contato => contato.nome.includes(descricao))
+            onDemandContatos: this.state.contatos.filter(contato =>
+                contato.nome.toLowerCase().includes(this.state.descricao.toLowerCase()))
         });
     }
 
 
     change(e) {
-        this.setState({...this.state, descricao: e.target.value});
-        console.log(this.state.descricao);
-        // this.refresh(e.target.value);
+        this.setState({...this.state, descricao: e.target.value}, this.refresh);
     }
 
     render() {
